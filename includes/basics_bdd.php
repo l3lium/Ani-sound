@@ -50,14 +50,14 @@ function countFields($table) {
     return $number[0];
 }
 
-/** getFieldbyId
+/** getFieldById
  * Cette fonction récupère un enregistrement de la table donnée en paramètre grâce à 
  * l'id également donnée en paramètre
  * @param Integer $id
  * @param String $table
  * @return PDO::FETCH_OBJ
  */
-function getFieldbyId($id, $table){
+function getFieldById($id, $table){
     $dbc = connection();
     $req = "SELECT * FROM $table WHERE id=:id";
     // preparation de la requete
