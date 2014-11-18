@@ -8,5 +8,15 @@
 }
 
 .img-thumbnail:hover{
-    border-color: cyan;
+    border-color: #89E894;
+    border-width: 3px;
+}
+
+.btn-info{
+    background-color: #7790cb;
+    border-color: #7790cb;
+}
+.btn-info:hover{
+    background-color: #4364b0;
+    border-color: #4364b0;
 }
