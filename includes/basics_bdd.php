@@ -1,10 +1,17 @@
 <?php
 /*
-======BDD Function======
+======Basic Bdd=======
 Auteur: 	Oliveira Stéphane & Seemuller Julien
 Classe: 	I.IN-P4B
 Date:		18/11/2014
 Version:	0.2
+Description:    Script contenant les fonctions basiques relative à la base de donnée
+                    - connexion base de donnée (PDO)
+                    - retourne le nombre d'enregistrement dans la table donnée
+                    - retourne un enregistrement par rapport à l'id
+                    - retourne tout les enregistrements d'une table donnée
+                    - retourne un nombre défini d'enregistrements pour la pagination
+                    - supprime un enregistrement de la table donnée par rapport à l'id
 */
 
 require_once 'constantes.php';
@@ -48,7 +55,7 @@ function countFields($table) {
  * l'id également donnée en paramètre
  * @param Integer $id
  * @param String $table
- * @return array OBJ
+ * @return PDO::FETCH_OBJ
  */
 function getFieldbyId($id, $table){
     $dbc = connection();
@@ -64,7 +71,7 @@ function getFieldbyId($id, $table){
 /** getAllFields
  * Cette fonction retourne tous les enregistrements de la table passée en paramètre
  * @param String $table
- * @return array OBJ
+ * @return PDO::FETCH_OBJ
  */
 function getAllFields($table){
     $dbc= connection();
@@ -75,6 +82,33 @@ function getAllFields($table){
     $data= $requPrep->fetchAll(PDO::FETCH_OBJ);
     $requPrep->closeCursor();
     return $data;
+}
+
+/**
+ * 
+ * @param Integer $page
+ * @param Integer $nbRow
+ * @param String $table
+ * @return PDO::FETCH_OBJ
+ */
+function getFieldsPagination($page = 0, $nbRow = 0, $table) {
+    $dbc = connection();
+    $offset= $page*$nbRow;
+    $max= $offset+$nbRow;
+
+    $req = "SELECT * FROM $table LIMIT :offset , :max ";
+
+    // preparation de la requete
+    $requPrep = $dbc->prepare($req); // on prépare notre requête
+    $requPrep->bindParam(':offset', $offset, PDO::PARAM_INT);
+    $requPrep->bindParam(':max', $nbRow, PDO::PARAM_INT);
+    
+    $requPrep->execute();
+    $clients = $requPrep->fetchAll(PDO::FETCH_OBJ);
+
+    $requPrep->closeCursor();
+    deconnection($dbc);
+    return $clients;
 }
 
 /** deleteFieldById
@@ -92,7 +126,6 @@ function deleteFieldById($id, $table){
     $requPrep->execute();
     $data= $requPrep->fetchAll(PDO::FETCH_OBJ);
     $requPrep->closeCursor();
-    return $data;
 }
 
 
