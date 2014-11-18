@@ -20,3 +20,23 @@
     background-color: #4364b0;
     border-color: #4364b0;
 }
+
+.btn a{
+    color: white;
+}
+
+.btn a:hover{
+    color: white;
+}
+
+.form-signin {
+    max-width: 550px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signin h3{
+    font-weight: bold;
+    font-size: 32px;
+    text-align: left;
+}

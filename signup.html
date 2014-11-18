@@ -45,50 +45,15 @@
         <!-- CONTAINER -->
         <div class="container">
             <div class="center-block">
-                <!-- CONTAINER PANELS ANIMAUX -->
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-lg btn-info center-block">Afficher Plus<span class="glyphicon glyphicon-chevron-down"></span></button>
+                <!-- CONTAINER LOGIN -->
+                <form class="form-signin" method="post" action="signup_test.php">
+                    <h3>Remplir les champs suivants</h3><hr/>
+                    <label class="">Pseudo:</label><input class="form-control" name="username" type="text" placeholder="ex : ''Johndoe''"/><br/>
+                    <label>Email:</label><input class="form-control" name="email" type="text" placeholder="ex : ''john.doe@placeholder.com''"/><br/> 
+                    <label>Password :</label><input class="form-control" name="password" type="password"/><br/>
+                    <label>Password confirm :</label><input class="form-control" name="passwordConfirm" type="password"/><br/>
+                    <button name="signup" class="btn btn-lg btn-primary btn-block" type="submit">S'inscrire</button>
+                </form>
             </div>
         </div>
 
