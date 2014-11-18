@@ -3,6 +3,10 @@
     Author     : SEEMULLERJ_INFO & OLIVEIRAS_INFO
 */
 
-.btn, .form-control{
+.btn, .form-control, .img-thumbnail, .panel, .panel-heading{
     border-radius: 0px;
+}
+
+.img-thumbnail:hover{
+    border-color: cyan;
 }
