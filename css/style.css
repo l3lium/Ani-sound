@@ -12,7 +12,7 @@
     border-width: 3px;
 }
 
-.btn-info{
+.btn-info, .btn-info:focus, .btn-info:active{
     background-color: #7790cb;
     border-color: #7790cb;
 }
@@ -39,4 +39,9 @@
     font-weight: bold;
     font-size: 32px;
     text-align: left;
+}
+
+.dropdown-menu, .dropdown, .dropdown-toggle{
+    text-align: right;
+    border-radius: 0px;
 }
