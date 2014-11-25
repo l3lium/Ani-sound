@@ -17,11 +17,13 @@
             </ul>
             <form class="navbar-form navbar-right" role="form">
                 <ul class="nav nav-pills" role="tablist">
-                    <li role="presentation" class="active">
-                        <a href="#"> <!-- INSERT USERPAGE IN HREF -->
-                            <i>ADMIN</i>
-                            <span class="badge">13<!--INSERT NUMBER HERE FOR REQUESTS ( LEAVE EMPTY FOR USERS ) --></span>
-                        </a>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i>Username </i><span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="btn btn-link" href="#">Proposer un animal <span class="glyphicon glyphicon-plus-sign"></span></a></li>
+                            <li><a class="btn btn-link" href="#">Requetes en cours <span class="badge">10</span></a></li>
+                            <li><a class="btn btn-link" href="#">Se deconnecter <span class="glyphicon glyphicon-lock"></span></a></li>
+                        </ul>
                     </li>
                 </ul>
             </form>
