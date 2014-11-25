@@ -1,6 +1,6 @@
 <?php
 /*
-======Specific Bdd======
+======Specific functions======
 Auteur: 	Oliveira Stéphane & Seemuller Julien
 Classe: 	I.IN-P4B
 Date:		18/11/2014

@@ -1,5 +1,5 @@
 <?php
-require_once '../includes/specific_bdd.php';
+require_once '../includes/specific_funtions.php';
 
 if (filter_input(INPUT_POST, 'signup')) {
     $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);

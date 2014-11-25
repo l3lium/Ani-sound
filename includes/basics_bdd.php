@@ -51,6 +51,27 @@ function countFields($table) {
     return $number[0];
 }
 
+/** countFieldsCondition
+ * Fonction qui retourne le nombre total d'enregistrement d'une table selon une 
+ * condition passée en parametre
+ * @param string $table
+ * @param string $condition
+ * @return type
+ */
+function countFieldsCondition($table, $condition) {
+    $dbc = connection();
+    $dbc->quote($table);
+    $dbc->quote($condition);
+    $req = "SELECT COUNT(*) FROM $table $condition";
+    
+    $requPrep = $dbc->prepare($req);
+    $requPrep->execute();
+    
+    $number=$requPrep->fetch();
+    $requPrep->closeCursor();
+    return $number[0];
+}
+
 /** getFieldById
  * Cette fonction récupère un enregistrement de la table donnée en paramètre grâce à 
  * l'id également donnée en paramètre
@@ -87,8 +108,9 @@ function getAllFields($table){
     return $data;
 }
 
-/**
- * 
+/** getPaginationQuerry
+ * Retourne la liste des enregistrement d'une page donnée en paramètre selon la 
+ * requette egalement passée en parametre 
  * @param Integer $page
  * @param Integer $nbRow
  * @param String $table
@@ -110,8 +132,9 @@ function getPaginationQuerry($page = 0, $nbRow = 0, $query) {
     return $clients;
 }
 
-/**
- * 
+/** getFieldsPagination
+ * Retourne la liste des enregistrement d'une page donnée en paramètre selon la 
+ * table egalement passée en parametre 
  * @param Integer $page
  * @param Integer $nbRow
  * @param String $table
@@ -121,18 +144,14 @@ function getFieldsPagination($page = 0, $nbRow = 0, $table) {
     $dbc = connection();
     $dbc->quote($table);
     $offset= $page*$nbRow;
-    $max= $offset+$nbRow;
-
+    
     $req = "SELECT * FROM $table LIMIT :offset , :max ";
-
     // preparation de la requete
     $requPrep = $dbc->prepare($req); // on prépare notre requête
     $requPrep->bindParam(':offset', $offset, PDO::PARAM_INT);
-    $requPrep->bindParam(':max', $nbRow, PDO::PARAM_INT);
-    
+    $requPrep->bindParam(':max', $nbRow, PDO::PARAM_INT);  
     $requPrep->execute();
     $clients = $requPrep->fetchAll(PDO::FETCH_OBJ);
-
     $requPrep->closeCursor();
     return $clients;
 }

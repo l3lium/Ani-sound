@@ -1,14 +1,13 @@
 <?php
-
 /*
   ======Structure PHP======
   Auteur: 	Oliveira Stéphane & Seemuller Julien
   Classe: 	I.IN-P4B
   Date:		25/11/2014
   Version:	0.1
-  Description:  Script permettant de définir quel include a utiliser en dépendant de l'utilisateur
+  Description:  Script permettant de définir quel include a utiliser dépendamment de l'utilisateur
  */
-require_once 'specific_bdd.php';
+require_once 'specific_funtions.php';
 
 function getHeader() {
     //On affiche différents headers en fonction de la personne qui est connectée

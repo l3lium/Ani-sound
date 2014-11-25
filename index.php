@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/specific_bdd.php';
+require_once 'includes/specific_funtions.php';
 require_once 'includes/struct.php';
 
 //Connexion utilisateur
@@ -11,7 +11,8 @@ if (filter_input(INPUT_POST, 'login')) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+    <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,6 +22,11 @@ if (filter_input(INPUT_POST, 'login')) {
         <link href="./css/bootstrap.min.css" rel="stylesheet">
         <link href="./css/style.css" rel="stylesheet">
         <script src="./js/ie-emulation-modes-warning.js"></script>
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/ie10-viewport-bug-workaround.js"></script>
     </head>
 
     <body>
@@ -160,9 +166,5 @@ if (filter_input(INPUT_POST, 'login')) {
         <?php
             getFooter();
         ?>
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="./js/bootstrap.min.js"></script>
-        <script src="./js/ie10-viewport-bug-workaround.js"></script>
+        
     </body></html>

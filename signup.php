@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/specific_bdd.php';
+require_once 'includes/specific_funtions.php';
 require_once 'includes/struct.php';
 
 if (isConnected()) {

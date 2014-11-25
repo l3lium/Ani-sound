@@ -1,9 +1,14 @@
 <?php
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+/*
+======Crud Animal=======
+Auteur: 	Oliveira Stéphane & Seemuller Julien
+Classe: 	I.IN-P4B
+Date:		25/11/2014
+Version:	1.0
+Description:    Script contenant les fonctions en relation avec le 
+                l'identification et le crud user (create, read, update, delete)
+*/
+
 require_once 'basics_bdd.php';
 
 function createUser($email, $username, $password){
