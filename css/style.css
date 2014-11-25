@@ -40,3 +40,8 @@
     font-size: 32px;
     text-align: left;
 }
+
+.dropdown-menu, .dropdown, .dropdown-toggle{
+    text-align: right;
+    border-radius: 0px;
+}
