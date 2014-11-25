@@ -9,7 +9,6 @@ if (filter_input(INPUT_POST, 'login')) {
     
     userConnect($pseudo, $pass);
 }
-debug($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en"><head>

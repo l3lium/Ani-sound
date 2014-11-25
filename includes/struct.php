@@ -15,9 +15,9 @@ function getHeader() {
     //Si personne n'est connecté, on affiche un header donnant la possibilité de s'inscrire et de se logger.
     if (isConnected()) {
         if (isAdmin()) {
-            include 'structure/header_logged_in_admin';
+            include 'structure/header_logged_in_admin.php';
         } else {
-            include 'structure/header_logged_in';
+            include 'structure/header_logged_in.php';
         }
     } 
     else {
@@ -30,9 +30,9 @@ function getFooter() {
     //Si personne n'est connecté, on affiche un footer par défaut
     if (isConnected()) {
         if (isAdmin()) {
-            include 'structure/footer_logged_in_admin';
+            include 'structure/footer_logged_in_admin.php';
         } else {
-            include 'structure/footer_logged_in';
+            include 'structure/footer_logged_in.php';
         }
     } 
     else {
