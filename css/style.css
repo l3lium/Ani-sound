@@ -12,7 +12,7 @@
     border-width: 3px;
 }
 
-.btn-info{
+.btn-info, .btn-info:focus, .btn-info:active{
     background-color: #7790cb;
     border-color: #7790cb;
 }
