@@ -1,6 +1,15 @@
 <?php
 require_once 'includes/specific_bdd.php';
 require_once 'includes/struct.php';
+
+//Connexion utilisateur
+if (filter_input(INPUT_POST, 'login')) {
+    $pseudo = filter_input(INPUT_POST, 'username');
+    $pass = filter_input(INPUT_POST, 'password');
+    
+    userConnect($pseudo, $pass);
+}
+debug($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en"><head>

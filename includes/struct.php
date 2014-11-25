@@ -1,12 +1,12 @@
 <?php
 
 /*
-  ======Specific Bdd======
+  ======Structure PHP======
   Auteur: 	Oliveira Stéphane & Seemuller Julien
   Classe: 	I.IN-P4B
   Date:		25/11/2014
   Version:	0.1
-  Description:    Script regroupant les fonctions spécifiques au site web et la base de donnée
+  Description:  Script permettant de définir quel include a utiliser en dépendant de l'utilisateur
  */
 require_once 'specific_bdd.php';
 

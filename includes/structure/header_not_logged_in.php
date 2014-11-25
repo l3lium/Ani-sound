@@ -15,15 +15,15 @@
                 <li class="active"><a href="maquette.html">Acceuil</a></li>
                 <li><a href="#game">Mini-jeux</a></li>
             </ul>
-            <form class="navbar-form navbar-right" role="form">
+            <form action="index.php" method="post" class="navbar-form navbar-right" role="form">
                 <div class="form-group">
-                    <input type="text" placeholder="Username" class="form-control">
+                    <input name="username" type="text" placeholder="Username" class="form-control">
                 </div>
                 <div class="form-group">
-                    <input type="password" placeholder="Mot-de-passe" class="form-control">
+                    <input type="password" name="password" placeholder="Mot-de-passe" class="form-control">
                 </div>
                 <button name="login" type="submit" class="btn btn-success">Se connecter  <span class="glyphicon glyphicon-lock"></span></button>
-                <a class="btn btn-primary" href="signup.html">S'enregistrer <span class="glyphicon glyphicon-user"></span></a>
+                <a class="btn btn-primary" href="signup.php">S'enregistrer <span class="glyphicon glyphicon-user"></span></a>
             </form>
         </div>
     </div>
