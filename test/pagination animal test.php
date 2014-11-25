@@ -7,5 +7,7 @@
  */
 require_once '../includes/specific_bdd.php';
 
-debug(getFieldsPagination(1, NB_PAGINATION, 'animal'));
+debug(getPageAnimals(0));
+
+debug(getPageAnimalsPending(0));
 
