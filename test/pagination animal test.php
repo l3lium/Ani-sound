@@ -7,7 +7,10 @@
  */
 require_once '../includes/specific_bdd.php';
 
-debug(getPageAnimals(0));
+debug(countAnimals());
 
 debug(getPageAnimalsPending(0));
+
+echo addAnimal();
+deleteAnimalById(10);
 

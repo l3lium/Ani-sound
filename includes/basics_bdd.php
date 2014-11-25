@@ -99,7 +99,6 @@ function getPaginationQuerry($page = 0, $nbRow = 0, $query) {
     $offset= $page*$nbRow;
 
     $req = $query." LIMIT :offset , :max ";
-    echo $req.PHP_EOL.$offset.PHP_EOL.$nbRow;
     // preparation de la requete
     $requPrep = $dbc->prepare($req); // on prépare notre requête
     $requPrep->bindParam(':offset', $offset, PDO::PARAM_INT);
@@ -107,7 +106,6 @@ function getPaginationQuerry($page = 0, $nbRow = 0, $query) {
     
     $requPrep->execute();
     $clients = $requPrep->fetchAll(PDO::FETCH_OBJ);
-    print_r($clients);
     $requPrep->closeCursor();
     return $clients;
 }
