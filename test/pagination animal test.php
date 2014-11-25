@@ -7,10 +7,9 @@
  */
 require_once '../includes/specific_bdd.php';
 
-debug(countAnimals());
+$id= addAnimal('saas', 'img', 'sound');
+echo $id;
+deleteAnimalById($id);
 
-debug(getPageAnimalsPending(0));
-
-echo addAnimal();
-deleteAnimalById(10);
+//deleteAnimalById(5);
 
