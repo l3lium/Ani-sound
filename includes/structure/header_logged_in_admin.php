@@ -20,7 +20,7 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i>Administrator </i><span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="btn btn-link" href="#">Proposer un animal <span class="glyphicon glyphicon-plus-sign"></span></a></li>
+                            <li><a class="btn btn-link" href="#">Ajouter un animal <span class="glyphicon glyphicon-plus-sign"></span></a></li>
                             <li><a class="btn btn-link" href="#">Requetes en cours <span class="badge">10</span></a></li>
                             <li><a class="btn btn-link" href="logout.php">Se deconnecter <span class="glyphicon glyphicon-lock"></span></a></li>
                         </ul>
