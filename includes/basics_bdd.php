@@ -4,7 +4,7 @@
 Auteur: 	Oliveira Stéphane & Seemuller Julien
 Classe: 	I.IN-P4B
 Date:		18/11/2014
-Version:	0.2
+Version:	0.3
 Description:    Script contenant les fonctions basiques relative à la base de donnée
                     - connexion base de donnée (PDO)
                     - retourne le nombre d'enregistrement dans la table donnée
@@ -40,6 +40,7 @@ function connection() {
  */
 function countFields($table) {
     $dbc = connection();
+    $dbc->quote($table);
     $req = "SELECT COUNT(*) FROM $table";
     
     $requPrep = $dbc->prepare($req);
@@ -59,6 +60,7 @@ function countFields($table) {
  */
 function getFieldById($id, $table){
     $dbc = connection();
+    $dbc->quote($table);
     $req = "SELECT * FROM $table WHERE id=:id";
     // preparation de la requete
     $requPrep = $dbc->prepare($req); // on prépare notre requête
@@ -75,6 +77,7 @@ function getFieldById($id, $table){
  */
 function getAllFields($table){
     $dbc= connection();
+    $dbc->quote($table);
     $req = "SELECT * FROM $table";
 	
     $requPrep = $dbc->prepare($req); // on prépare notre requête
@@ -91,8 +94,34 @@ function getAllFields($table){
  * @param String $table
  * @return PDO::FETCH_OBJ
  */
+function getPaginationQuerry($page = 0, $nbRow = 0, $query) {
+    $dbc = connection();
+    $offset= $page*$nbRow;
+
+    $req = $query." LIMIT :offset , :max ";
+    echo $req.PHP_EOL.$offset.PHP_EOL.$nbRow;
+    // preparation de la requete
+    $requPrep = $dbc->prepare($req); // on prépare notre requête
+    $requPrep->bindParam(':offset', $offset, PDO::PARAM_INT);
+    $requPrep->bindParam(':max', $nbRow, PDO::PARAM_INT);
+    
+    $requPrep->execute();
+    $clients = $requPrep->fetchAll(PDO::FETCH_OBJ);
+    print_r($clients);
+    $requPrep->closeCursor();
+    return $clients;
+}
+
+/**
+ * 
+ * @param Integer $page
+ * @param Integer $nbRow
+ * @param String $table
+ * @return PDO::FETCH_OBJ
+ */
 function getFieldsPagination($page = 0, $nbRow = 0, $table) {
     $dbc = connection();
+    $dbc->quote($table);
     $offset= $page*$nbRow;
     $max= $offset+$nbRow;
 
@@ -107,7 +136,6 @@ function getFieldsPagination($page = 0, $nbRow = 0, $table) {
     $clients = $requPrep->fetchAll(PDO::FETCH_OBJ);
 
     $requPrep->closeCursor();
-    deconnection($dbc);
     return $clients;
 }
 
@@ -119,6 +147,7 @@ function getFieldsPagination($page = 0, $nbRow = 0, $table) {
  */
 function deleteFieldById($id, $table){
     $dbc= connection();
+    $dbc->quote($table);
     $req = "DELETE FROM $table WHERE id=:id";
 	
     $requPrep = $dbc->prepare($req); // on prépare notre requête
