@@ -13,4 +13,4 @@ DEFINE('DB_PASS', '');
 DEFINE('DB_HOST', 'localhost');
 DEFINE('DB_NAME', 'anisound');
 
-DEFINE('NB_PAGINATION', 12);
+DEFINE('NB_PAGINATION', 4);
