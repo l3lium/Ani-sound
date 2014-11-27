@@ -10,11 +10,12 @@ Description:    Fichier de test des fonctions du crud animal
 require_once '../includes/specific_funtions.php';
 if (!isConnected()){
     header("location: ../index.php");
+	exit;
 }
 
 echo 'Count not pending: ';
 debug(countAnimals());
-echo PHP_EOL."Count not pending: ";
+echo PHP_EOL."Count pending: ";
 debug(countAnimalsPending());
 
 echo 'Get (id=1):'.PHP_EOL;
