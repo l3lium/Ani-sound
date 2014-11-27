@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Mar 25 Novembre 2014 à 15:48
+-- Généré le :  Jeu 27 Novembre 2014 à 13:00
 -- Version du serveur :  5.6.15-log
 -- Version de PHP :  5.4.24
 
@@ -34,9 +34,13 @@ CREATE TABLE IF NOT EXISTS `animal` (
   `name` varchar(25) CHARACTER SET latin1 NOT NULL,
   `img` varchar(255) CHARACTER SET latin1 NOT NULL,
   `sound` varchar(255) CHARACTER SET latin1 NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `pending` tinyint(1) NOT NULL DEFAULT '1',
+  `idUser` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `name` (`name`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  UNIQUE KEY `name` (`name`),
+  KEY `idUser` (`idUser`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 
 -- --------------------------------------------------------
 
@@ -53,23 +57,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `userType` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`,`username`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `useranimals`
---
-
-DROP TABLE IF EXISTS `useranimals`;
-CREATE TABLE IF NOT EXISTS `useranimals` (
-  `idUser` int(11) NOT NULL,
-  `idAnimal` int(11) NOT NULL,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `pending` tinyint(1) NOT NULL DEFAULT '1',
-  PRIMARY KEY (`idUser`,`idAnimal`),
-  KEY `idUser` (`idUser`,`idAnimal`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 -- --------------------------------------------------------
 
