@@ -8,11 +8,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="maquette.html">Ani'Sound</a>
+            <a class="navbar-brand" href="index.php">Ani'Sound</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="maquette.html">Acceuil</a></li>
+                <li class="active"><a href="index.php">Acceuil</a></li>
                 <li><a href="#game">Mini-jeux</a></li>
             </ul>
             <form action="" method="post" class="navbar-form navbar-right" role="form">

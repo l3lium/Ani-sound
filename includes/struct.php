@@ -49,7 +49,7 @@ function structPageAnimals($page) {
                 <div class="panel-body">
                     <img class="img-thumbnail center-block" alt="thumbnail" src="' . $animal->img . '" data-holder-rendered="true" style="width: 200px; height: 200px;">
                     <audio>
-                        <source scr="' . $animal->sound . ' type="audio/mp3" />
+                        <source scr="' . $animal->sound . '" type="audio/mp3" />
                         Votre navigateur n\'est pas compatible.
                     </audio>    
                 </div>
