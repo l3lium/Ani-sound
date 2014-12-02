@@ -13,6 +13,6 @@ DEFINE('DB_PASS', '');
 DEFINE('DB_HOST', 'localhost');
 DEFINE('DB_NAME', 'anisound');
 
-DEFINE('NB_PAGINATION', 5);
+DEFINE('NB_PAGINATION', 8);
 DEFINE('CONTENT_UPLOAD', '/up-content/');
 DEFINE('SOUND_FOLDER', 'sound/animal/');
