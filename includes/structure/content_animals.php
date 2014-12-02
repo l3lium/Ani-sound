@@ -3,9 +3,13 @@
 require_once '../crud_Animal.php';
 require_once '../specific_funtions.php';
 
+if (filter_input("POST", 'next')){
+    $_SESSION["offset"] = $_SESSION["offset"] + 1;
+} 
+
 //On récupère les animaux par page
 $page = $_SESSION["offset"];
-$animals = getPageAnimalsPending($page);
+$animals = getPageAnimals($page);
 
 //On crée un panel pour chaque animaux de la page
 foreach ($animals as $animal) {
