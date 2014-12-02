@@ -6,8 +6,13 @@ require_once 'includes/struct.php';
 if (filter_input(INPUT_POST, 'login')) {
     $pseudo = filter_input(INPUT_POST, 'username');
     $pass = filter_input(INPUT_POST, 'password');
-    
+
     userConnect($pseudo, $pass);
+}
+
+//Si l'offset n'existe pas, on l'initialise (pagination)
+if (!isset($_SESSION["offset"])) {
+    $_SESSION["offset"] = 0;
 }
 ?>
 <!DOCTYPE html>
@@ -164,7 +169,7 @@ if (filter_input(INPUT_POST, 'login')) {
             </div>
         </div>
         <?php
-            getFooter();
+        getFooter();
         ?>
-        
+
     </body></html>
