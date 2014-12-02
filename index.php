@@ -42,6 +42,7 @@ if (filter_input(INPUT_POST, 'login')) {
                         <div class="panel panel-success">
                             <div class="panel-body">
                                 <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
+                                <audio><source src="horse.mp3" type="audio/mpeg"></audio>
                             </div>
                             <div class="panel-heading">
                                 <h3 class="panel-title">Nom de l'animal</h3>
