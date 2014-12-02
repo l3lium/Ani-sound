@@ -11,9 +11,7 @@ if (filter_input(INPUT_POST, 'login')) {
 }
 
 //Si l'offset n'existe pas, on l'initialise (pagination)
-if (!isset($_SESSION["offset"])) {
-    $_SESSION["offset"] = 0;
-}
+$_SESSION["offset"] = 0;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +30,7 @@ if (!isset($_SESSION["offset"])) {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
         <script src="./js/ie10-viewport-bug-workaround.js"></script>
+        <script src="./js/query_animals.js"></script>
     </head>
 
     <body>
@@ -42,131 +41,14 @@ if (!isset($_SESSION["offset"])) {
         <div class="container">
             <div class="center-block">
                 <!-- CONTAINER PANELS ANIMAUX -->
-                <div class="row">
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                                <audio><source src="horse.mp3" type="audio/mpeg"></audio>
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
+                <div id="animal-container" class="row">
+                    <?php
+                    $page = $_SESSION["offset"];
 
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="panel panel-success">
-                            <div class="panel-body">
-                                <img class="img-thumbnail center-block" alt="thumbnail" src="./img/placeholder.png" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                            </div>
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Nom de l'animal</h3>
-                            </div>
-                        </div>
-                    </div>
+                    echo structPageAnimals($page);
+                    ?>
                 </div>
-                <button type="button" class="btn btn-lg btn-info center-block">Afficher Plus<span class="glyphicon glyphicon-chevron-down"></span></button>
+                <button id="showmore" type="button" class="btn btn-lg btn-info center-block">Afficher Plus<span class="glyphicon glyphicon-chevron-down"></span></button>
             </div>
         </div>
         <?php
