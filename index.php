@@ -24,13 +24,16 @@ $_SESSION["offset"] = 0;
         <title>Ani'Sound</title>
         <link href="./css/bootstrap.min.css" rel="stylesheet">
         <link href="./css/style.css" rel="stylesheet">
-        <script src="./js/ie-emulation-modes-warning.js"></script>
+        <!--<script src="./js/ie-emulation-modes-warning.js"></script>-->
+        <!--<script src="./js/ie10-viewport-bug-workaround.js"></script>-->
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
-        <script src="./js/ie10-viewport-bug-workaround.js"></script>
+        <!-- Script Perso
+        ================================================== -->
         <script src="./js/query_animals.js"></script>
+        <script src="./js/playSound.js"></script>
     </head>
 
     <body>
