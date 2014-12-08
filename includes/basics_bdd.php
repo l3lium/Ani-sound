@@ -120,7 +120,7 @@ function getPaginationQuerry($page = 0, $nbRow = 0, $query) {
     $dbc = connection();
     $offset= $page*$nbRow;
 
-    $req = $query." LIMIT :offset , :max ";
+    $req = $query." LIMIT :offset , :max ";//Ajout de la limite pour la pagination
     // preparation de la requete
     $requPrep = $dbc->prepare($req); // on prépare notre requête
     $requPrep->bindParam(':offset', $offset, PDO::PARAM_INT);
@@ -145,7 +145,7 @@ function getFieldsPagination($page = 0, $nbRow = 0, $table) {
     $dbc->quote($table);
     $offset= $page*$nbRow;
     
-    $req = "SELECT * FROM $table LIMIT :offset , :max ";
+    $req = "SELECT * FROM $table LIMIT :offset , :max ";//Ajout de la limite pour la pagination
     // preparation de la requete
     $requPrep = $dbc->prepare($req); // on prépare notre requête
     $requPrep->bindParam(':offset', $offset, PDO::PARAM_INT);
