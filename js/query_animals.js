@@ -13,6 +13,7 @@ $( document ).ready(function(){
         xhr.onreadystatechange = function(event){
             if (xhr.readyState === 4){
                 $("#animal-container").append(event.target.responseText);
+                AddClickEvent();
             }  
         };
     });
