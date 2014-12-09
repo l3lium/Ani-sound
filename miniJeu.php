@@ -24,7 +24,6 @@ require_once 'includes/struct.php';
         <script src="./js/query_animals.js"></script>
         <script src="./js/playSound.js"></script>
     </head>
-
     <body>
         <?php
         getHeader();
