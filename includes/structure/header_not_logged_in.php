@@ -13,7 +13,7 @@
         <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="index.php">Acceuil</a></li>
-                <li><a href="#game">Mini-jeux</a></li>
+                <li><a href="miniJeu.php">Mini-jeux</a></li>
             </ul>
             <form action="" method="post" class="navbar-form navbar-right" role="form">
                 <div class="form-group">
