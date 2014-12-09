@@ -23,9 +23,9 @@ $notPendingC="WHERE pending=true";
  */
 function countAnimals() {
     global $table;
-    global $notPendingC;   
+    global $pendingC;   
 
-    return countFieldsCondition($table, $notPendingC);
+    return countFieldsCondition($table, $pendingC);
 }
 
 /** countAnimalsPending
@@ -36,9 +36,9 @@ function countAnimals() {
  */
 function countAnimalsPending() {
     global $table;
-    global $pendingC;
+    global $notPendingC;
      
-    return countFieldsCondition($table, $pendingC);
+    return countFieldsCondition($table, $notPendingC);
 }
 
 /**addAnimal

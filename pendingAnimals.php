@@ -1,6 +1,7 @@
 <?php
 require_once 'includes/specific_funtions.php';
 require_once 'includes/struct.php';
+require_once 'includes/crud_Animal.php';
 
 //Connexion utilisateur
 if (filter_input(INPUT_POST, 'login')) {
@@ -10,8 +11,18 @@ if (filter_input(INPUT_POST, 'login')) {
     userConnect($pseudo, $pass);
 }
 
+if ($id = filter_input(INPUT_GET, 'delete')) {
+    deleteAnimalById($id);
+}
+
+if ($id = filter_input(INPUT_GET, 'update')) {
+    validateAnimal($id);
+}
+
 //Si l'offset n'existe pas, on l'initialise (pagination)
 $_SESSION["offset"] = 0;
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
