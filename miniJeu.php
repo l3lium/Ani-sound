@@ -34,7 +34,7 @@ require_once 'includes/struct.php';
             <div class="center-block">
                 <!-- CONTAINER PANELS ANIMAUX -->
                 <div id="animal-container" class="row">
-                 
+                    <h1>Trouvez l'animal</h1><hr/>
                 </div>
             </div>
         </div>
