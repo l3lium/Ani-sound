@@ -3,7 +3,7 @@ $( document ).ready(function(){
     $("#showmore").click(function(){
         var xhr = new XMLHttpRequest();
         var params = "next=";
-        var url = 'includes/structure/content_animals.php';
+        var url = $(this).attr('data-url');
         
         xhr.open("POST", url, true);
         xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

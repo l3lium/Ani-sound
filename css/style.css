@@ -45,3 +45,8 @@
     text-align: right;
     border-radius: 0px;
 }
+
+#pending-image{
+    text-align: center;
+    margin-top: 10px;
+}

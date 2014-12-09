@@ -51,7 +51,7 @@ $_SESSION["offset"] = 0;
                     echo structPageAnimals($page);
                     ?>
                 </div>
-                <button id="showmore" type="button" class="btn btn-lg btn-info center-block">Afficher Plus<span class="glyphicon glyphicon-chevron-down"></span></button>
+                <button id="showmore" type="button" data-url="includes/structure/content_animals.php" class="btn btn-lg btn-info center-block">Afficher Plus<span class="glyphicon glyphicon-chevron-down"></span></button>
             </div>
         </div>
         <?php

@@ -61,3 +61,31 @@ function structPageAnimals($page) {
     }
     return $str;
 }
+
+function structPageRequestAnimals($page) {
+    $animals = getPageAnimalsPending($page);
+    $str='';
+    
+    //On crée un panel pour chaque animaux de la page
+    foreach ($animals as $animal) {
+        $str.= '<div class="col-sm-3">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <img class="img-thumbnail center-block img-animal" alt="thumbnail" src="' . $animal->img . '" data-holder-rendered="true" style="width: 200px; height: 200px;">
+                    <audio>
+                        <source src="' . $animal->sound . '" type="audio/mpeg" />
+                        Votre navigateur n\'est pas compatible.
+                    </audio>    
+                </div>
+                <div class="panel-heading pending-image">
+                    <h3 class="panel-title">' . $animal->name . '</h3>
+                    <div id="pending-image">
+                        <a href="?delete='. $animal->id .'"><img src="img/cross.svg" alt="crossmark" height="50" width="50"/></a>
+                        <a href="?update='. $animal->id .'"><img src="img/check.svg" alt="checkmark" height="50" width="50"/></a>
+                    </div>
+                </div>
+            </div>
+          </div>';
+    }
+    return $str;
+}
