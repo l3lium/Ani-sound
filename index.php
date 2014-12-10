@@ -57,5 +57,5 @@ $_SESSION["offset"] = 0;
         <?php
         getFooter();
         ?>
-
-    </body></html>
+    </body>
+</html>

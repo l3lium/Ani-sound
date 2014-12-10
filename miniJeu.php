@@ -23,6 +23,7 @@ require_once 'includes/struct.php';
         ================================================== -->
         <script src="./js/query_animals.js"></script>
         <script src="./js/playSound.js"></script>
+        <script src="./js/minigame.js"></script>
     </head>
     <body>
         <?php
@@ -32,24 +33,23 @@ require_once 'includes/struct.php';
         <div class="container">
             <div class="center-block">
                 <!-- CONTAINER PANELS ANIMAUX -->
-                <div id="animal-container" class="row">
-                    <h1>Trouvez l'animal</h1><hr/>
-                    <article class="center-block">
-                        <div class="jumbotron">
-                            <h2>Instructions</h2><hr/>
-                            <p>
-                                Pour jouer au jeu, appuyez sur le bouton rouge. Soyez sur d'avoir une source audio a disposition.
-                                Puis, écoutez le cri de l'animal, cliquez ensuite sur l'animal auquel le cri appartient.
-                                Si le cri correspond bien à l'animal choisi, le jeu vous affichera une confirmation, sinon un
-                                écran "Game Over" vous donnera la possibilité de rejouer
-                            </p><br>
-                            <button type="button" class="btn btn-lg btn-danger center-block">Démarrer le jeu</button>
-                        </div>
-                    </article>
-                </div>
+                <h1>Trouvez l'animal</h1><hr/>
+                <article class="center-block">
+                    <div class="jumbotron">
+                        <h2>Instructions</h2><hr/>
+                        <p>
+                            Pour jouer au jeu, appuyez sur le bouton rouge. Soyez sur d'avoir une source audio a disposition.
+                            Puis, écoutez le cri de l'animal, cliquez ensuite sur l'animal auquel le cri appartient.
+                            Si le cri correspond bien à l'animal choisi, le jeu vous affichera une confirmation, sinon un
+                            écran "Game Over" vous donnera la possibilité de rejouer
+                        </p><br>
+                        <button id="startGame" type="button" data-url="includes/structure/allAnimals.php" class="btn btn-lg btn-danger center-block">Démarrer le jeu</button>
+                    </div>
+                </article>
             </div>
         </div>
         <?php
         getFooter();
         ?>
-    </body></html>
+    </body>
+</html>
