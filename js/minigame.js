@@ -1,7 +1,12 @@
 var animals;
 
-function drawAnimal(){
-    
+function drawAnimal(arrayAnimal) {
+    arrayOutput = new Array;
+
+    for (i = 0; i < 3; i++) {
+        arrayOutput[i] = arrayAnimal[Math.round(Math.random(arrayAnimal.length))];
+    }
+    return arrayOutput;
 }
 
 $(document).ready(function () {
@@ -21,8 +26,8 @@ $(document).ready(function () {
                 alert("done")
                 animals = JSON.parse(event.target.responseText);
                 console.log(animals);
-                
             }
         };
     });
-});
+}
+);
