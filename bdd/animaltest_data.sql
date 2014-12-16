@@ -21,6 +21,11 @@ SET time_zone = "+00:00";
 --
 
 --
+-- Vider la table avant d'insérer `user`
+--
+
+TRUNCATE TABLE `animal`;
+--
 -- Contenu de la table `animal`
 --
 
