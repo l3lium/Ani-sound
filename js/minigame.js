@@ -1,5 +1,13 @@
 var animals;
 
+//animation de suppression
+function slideLeftDelete(name) {
+    $('#' + name).animate({
+        opacity: 0,
+        marginLeft: "120"
+    }, 'slow').delay(800).remove;
+}
+
 function drawAnimal(arrayAnimal) {
     arrayOutput = new Array;
 
@@ -9,8 +17,8 @@ function drawAnimal(arrayAnimal) {
     return arrayOutput;
 }
 
-$(document).ready(function () {
-    $("#startGame").click(function () {
+$(document).ready(function() {
+    $("#startGame").click(function() {
 
         var xhr = new XMLHttpRequest();
         var url = $(this).attr('data-url');
@@ -21,7 +29,7 @@ $(document).ready(function () {
         //xhr.setRequestHeader("Content-length", params.length);
         //xhr.setRequestHeader("Connection", "close");
         xhr.send(params);
-        xhr.onreadystatechange = function (event) {
+        xhr.onreadystatechange = function(event) {
             if (xhr.readyState === 4) {
                 alert("done")
                 animals = JSON.parse(event.target.responseText);
