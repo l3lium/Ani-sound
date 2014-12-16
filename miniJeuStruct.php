@@ -51,59 +51,55 @@ require_once 'includes/struct.php';
                 <h1>Trouvez l'animal</h1><hr/>
                 <article class="center-block">
                     <div class="jumbotron">
-                        <div id="game" class="row">
-                            <div id="draganddrop" class="center-block" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-                            <hr/>
-                            <div id="animal1" class="col-sm-4 animal" draggable="true" ondragstart="drag(event)">
-                                <div class="panel panel-success">
-                                    <div class="panel-body">
-                                        <img class="img-thumbnail center-block img-animal" alt="thumbnail" src="up-content/img/animal/cheval.jpg" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                                        <audio>
-                                            <source src="up-content/sound/animal/cheval.mp3" type="audio/mpeg">
-                                            Votre navigateur n'est pas compatible.
-                                        </audio>    
+                        <div id="game">
+                            <div id="victory" class="alert-success">
+                                <h1>Bravo les copains !</h1>
+                                <button type="button" data-url="includes/structure/content_animals.php" class="btn btn-lg btn-warning center-block">Rejouer  <span class="glyphicon glyphicon-refresh"></span></button>
+                            </div>
+                            <div id="defeat" class="alert-danger">
+                                <h1>Perdu les amis !</h1>
+                                <button type="button" data-url="includes/structure/content_animals.php" class="btn btn-lg btn-warning center-block">Rejouer  <span class="glyphicon glyphicon-refresh"></span></button>
+                            </div>
+                            <div id="draganddrop" ondragover="allowDrop(event)" ondrop="drop(event)">
+                                <h2>Déposer ici</h2>
+                            </div>
+                            <button id="replaySound" type="button" data-url="includes/structure/content_animals.php" class="btn btn-lg btn-success center-block">Rejouer le son  <span class="glyphicon glyphicon-repeat"></span></button>
+                            <div id="animals" class="row" ondragover="allowDrop(event)" ondrop="drop(event)">
+                                <div id="animal1" class="col-sm-4 animal" draggable="true" ondragstart="drag(event)">
+                                    <div class="panel panel-success">
+                                        <div class="panel-body">
+                                            <img class="img-thumbnail center-block img-animal" alt="thumbnail" src="up-content/img/animal/cheval.jpg" data-holder-rendered="true" style="width: 200px; height: 200px;">  
+                                        </div>
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Cheval</h3>
+                                        </div>
                                     </div>
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Cheval</h3>
+                                </div>
+                                <div id="animal2" class="col-sm-4 animal" draggable="true" ondragstart="drag(event)">
+                                    <div class="panel panel-success">
+                                        <div class="panel-body">
+                                            <img class="img-thumbnail center-block img-animal" alt="thumbnail" src="up-content/img/animal/seal.jpg" data-holder-rendered="true" style="width: 200px; height: 200px;">   
+                                        </div>
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Phoque</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="animal3" class="col-sm-4 animal" draggable="true" ondragstart="drag(event)">
+                                    <div class="panel panel-success">
+                                        <div class="panel-body">
+                                            <img class="img-thumbnail center-block img-animal" alt="thumbnail" src="up-content/img/animal/loutre.jpg" data-holder-rendered="true" style="width: 200px; height: 200px;">   
+                                        </div>
+                                        <div class="panel-heading">
+                                            <h3 class="panel-title">Loutre</h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="animal2" class="col-sm-4 animal" draggable="true" ondragstart="drag(event)">
-                                <div class="panel panel-success">
-                                    <div class="panel-body">
-                                        <img class="img-thumbnail center-block img-animal" alt="thumbnail" src="up-content/img/animal/cheval.jpg" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                                        <audio>
-                                            <source src="up-content/sound/animal/cheval.mp3" type="audio/mpeg">
-                                            Votre navigateur n'est pas compatible.
-                                        </audio>    
-                                    </div>
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Cheval</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="animal3" class="col-sm-4 animal" draggable="true" ondragstart="drag(event)">
-                                <div class="panel panel-success">
-                                    <div class="panel-body">
-                                        <img class="img-thumbnail center-block img-animal" alt="thumbnail" src="up-content/img/animal/cheval.jpg" data-holder-rendered="true" style="width: 200px; height: 200px;">
-                                        <audio>
-                                            <source src="up-content/sound/animal/cheval.mp3" type="audio/mpeg">
-                                            Votre navigateur n'est pas compatible.
-                                        </audio>    
-                                    </div>
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Cheval</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <button id="showmore" type="button" data-url="includes/structure/content_animals.php" class="btn btn-lg btn-success center-block">Rejouer le son  <span class="glyphicon glyphicon-repeat"></span></button>
                         </div>
                     </div>
                 </article>
             </div>
         </div>
-        <?php
-        getFooter();
-        ?>
     </body>
 </html>

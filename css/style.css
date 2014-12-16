@@ -59,20 +59,44 @@ footer{
     margin: 0 auto;
 }
 
+#replaySound{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 #draganddrop{
-    height: 290px;
-    width: auto;
-    border: solid 1px black;
+    height: 280px;
+    width: 320px;
+    border: solid 3px #959595;
     text-align: center;
     color: #959595;
     text-align: center;
     margin: auto;
 }
 
+#draganddrop h2{
+    width: 320px;
+    height: 50px;
+    position: absolute;
+    margin: auto;
+    padding-top: 5%;
+}
+
 #game{
     height: auto;
     width: auto;
+    text-align: center;
 }
 #draganddrop .animal{
-    margin-left: 35%;
+    /*margin-left: 35%;*/
+    width: 100%;
+    z-index: 1000;
+}
+#victory, #defeat{
+    border: solid 1px #03c03c;
+    padding: 20px;
+    margin: 20px;
+}
+#defeat{
+    border: solid 1px #c00329;
 }
