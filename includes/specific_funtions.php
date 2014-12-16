@@ -1,21 +1,23 @@
 <?php
+
 /*
-======Specific functions======
-Auteur: 	Oliveira Stéphane & Seemuller Julien
-Classe: 	I.IN-P4B
-Date:		18/11/2014
-Version:	0.1
-Description:    Script regroupant les fonctions spécifiques au site web et la base de donnée
-*/
+  ======Specific functions======
+  Auteur: 	Oliveira Stéphane & Seemuller Julien
+  Classe: 	I.IN-P4B
+  Date:		18/11/2014
+  Version:	0.1
+  Description:    Script regroupant les fonctions spécifiques au site web et la base de donnée
+ */
 
 session_start();
 require_once 'crud_User.php';
 require_once 'crud_Animal.php';
 
-function isAdmin(){
+function isAdmin() {
     return ($_SESSION['usertype'] == 2);
 }
-function isConnected(){
+
+function isConnected() {
     return (isset($_SESSION['id']));
 }
 
@@ -24,9 +26,18 @@ function isConnected(){
  * @param string $value
  * @return string
  */
+
 function hashPerso($password, $username) {
     $derp = $password . 'SaaS';
-    return sha1(md5($derp)+$username);
+    return sha1(md5($derp) + $username);
+}
+
+function checkImageType($fileType) {
+    return in_array($fileType, unserialize(ALLOWED_IMAGE_TYPES));
+}
+
+function checkSoundType($fileType) {
+    return in_array($fileType, unserialize(ALLOWED_SOUND_TYPES));
 }
 
 function debug($sObj = NULL) {
