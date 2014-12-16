@@ -58,3 +58,21 @@ footer{
     height: 40px;
     margin: 0 auto;
 }
+
+#draganddrop{
+    height: 290px;
+    width: auto;
+    border: solid 1px black;
+    text-align: center;
+    color: #959595;
+    text-align: center;
+    margin: auto;
+}
+
+#game{
+    height: auto;
+    width: auto;
+}
+#draganddrop .animal{
+    margin-left: 35%;
+}
