@@ -3,7 +3,7 @@
 Auteur: 	Oliveira Stéphane & Seemuller Julien
 Classe: 	I.IN-P4B
 Date:		16/12/2014
-Version:	0.1
+Version:	0.2
 */
 
 var animalPanel = "<div class=\"col-sm-4 animal\">" +
@@ -141,7 +141,7 @@ function Game() {
             var element = $(animalPanel).clone();
             $(element).attr("id", "animal" + i).appendTo("#animals");
             //Definission 
-            element.find(".panel-body > img").attr("src", this.animals[i].img);
+            element.find(".panel-body > img").attr("src", this.animals[i].img).attr("id", "imgAnimal"+i);
             element.find(".panel-body > img").data("id", this.animals[i].id);
             element.find(".panel-heading > h3").text(this.animals[i].name);
 
