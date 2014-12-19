@@ -3,7 +3,7 @@
     Author     : SEEMULLERJ_INFO & OLIVEIRAS_INFO
 */
 
-.btn, .form-control, .img-thumbnail, .panel, .panel-heading{
+.btn, .form-control, .img-thumbnail, .panel, .panel-heading, .alert{
     border-radius: 0px;
 }
 
@@ -64,39 +64,43 @@ footer{
     margin-bottom: 20px;
 }
 
-#draganddrop{
+#dropzone{
     height: 280px;
     width: 320px;
     border: solid 3px #959595;
     text-align: center;
     color: #959595;
-    text-align: center;
     margin: auto;
-}
-
-#draganddrop h2{
-    width: 320px;
-    height: 50px;
-    position: absolute;
-    margin: auto;
-    padding-top: 5%;
 }
 
 #game{
     height: auto;
     width: auto;
+    display: none;
     text-align: center;
 }
-#draganddrop .animal{
+#dropzone .img-animal{
     /*margin-left: 35%;*/
-    width: 100%;
-    z-index: 1000;
+    display: block;
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
 }
 #victory, #defeat{
     border: solid 1px #03c03c;
+    display: none;
     padding: 20px;
     margin: 20px;
 }
 #defeat{
     border: solid 1px #c00329;
+}
+#animals{
+    background-color: #f8f8f8;
+    padding: 20px;
+    margin: auto;
+}
+
+#game .panel-body{
+    height: 230px;
 }
