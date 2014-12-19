@@ -78,9 +78,7 @@ if (filter_input(INPUT_POST, 'login')) {
             </div>
         </article>
     </div>
-    <?php
-    getFooter();
-    ?>
+
 </div>
 
 </body>

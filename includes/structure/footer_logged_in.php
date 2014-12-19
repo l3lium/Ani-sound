@@ -1,5 +1,5 @@
-<footer class="footer">
-    <div class="container">
-        <p class="text-muted">INSERER DU CONTENU ICI</p>
-    </div>
-</footer>
+<div class="container">
+    <footer>
+        <p>COPYRIGHT © CFPT 2014 - OLIVEIRA Stéphane & SEEMULLER Julien</p>
+    </footer>    
+</div>

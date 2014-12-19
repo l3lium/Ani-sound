@@ -54,8 +54,5 @@ $_SESSION["offset"] = 0;
                 <button id="showmore" type="button" data-url="includes/structure/content_animals.php" class="btn btn-lg btn-info center-block">Afficher Plus<span class="glyphicon glyphicon-chevron-down"></span></button>
             </div>
         </div>
-        <?php
-        getFooter();
-        ?>
     </body>
 </html>

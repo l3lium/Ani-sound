@@ -21,8 +21,6 @@ if ($id = filter_input(INPUT_GET, 'update')) {
 
 //Si l'offset n'existe pas, on l'initialise (pagination)
 $_SESSION["offset"] = 0;
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,8 +63,5 @@ $_SESSION["offset"] = 0;
                 <button id="showmore" type="button" data-url="includes/structure/content_pending_animals.php" class="btn btn-lg btn-info center-block">Afficher Plus<span class="glyphicon glyphicon-chevron-down"></span></button>
             </div>
         </div>
-        <?php
-        getFooter();
-        ?>
-
-    </body></html>
+    </body>
+</html>

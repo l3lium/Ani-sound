@@ -83,7 +83,4 @@ getHeader();
         <script src="./js/bootstrap.min.js"></script>
         <script src="./js/ie10-viewport-bug-workaround.js"></script>
     </body>
-    <?php
-    getFooter();
-    ?>
 </html>
