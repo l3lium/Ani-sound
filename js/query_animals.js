@@ -1,3 +1,13 @@
+/*
+======QueryAnimals=======
+Auteur: 	Oliveira Stéphane & Seemuller Julien
+Classe: 	I.IN-P4B
+Date:		9/12/2014
+Version:	1
+Description:    Script contenant les fonctions permettant de récuperer les 
+                animaux et les afficher pour la pagination
+*/
+
 $(document).ready(function() {
 
     $("#showmore").click(function() {
@@ -17,30 +27,4 @@ $(document).ready(function() {
             }
         };
     });
-
-    /*$("input[name='soundUpload']").change(function() {
-        console.debug('dada');
-        var xhr = new XMLHttpRequest();
-
-        var fd = new FormData();
-        var url = 'uploadSound.php';
-        xhr.open("POST", url, true);
-        xhr.setRequestHeader("Content-Type", "multipart/form-data");
-        console.debug($(this).attr("name"), $(this).prop('files')[0], $(this).val());
-        var myfiles = $(this).val();
-        console.debug(myfiles);
-        for (i = 0; i < myfiles.length; i++) {
-            fd.append($(this).attr("name"), myfiles[i]);
-        }
-        console.debug(myfiles[0]);
-        //fd.append($(this).attr("name"), $(this).prop('files')[0], $(this).val());
-        xhr.send(fd);
-
-        xhr.onreadystatechange = function(event) {
-            if (xhr.readyState === 4) {
-                console.debug(event.target.responseText);
-            }
-        };
-
-    });*/
 });

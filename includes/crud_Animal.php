@@ -12,8 +12,8 @@ Description:    Script contenant les fonctions en relation avec le crud animal
 require_once 'basics_bdd.php';
 
 $table = 'animal';
-$pendingC="WHERE pending=false";
-$notPendingC="WHERE pending=true";
+$pendingC="WHERE pending=true";
+$notPendingC="WHERE pending=false";
 
 /** countAnimals
  * Retourne le nombre d'animaux qui y ont été validés
@@ -23,9 +23,9 @@ $notPendingC="WHERE pending=true";
  */
 function countAnimals() {
     global $table;
-    global $pendingC;   
+    global $notPendingC;   
 
-    return countFieldsCondition($table, $pendingC);
+    return countFieldsCondition($table, $notPendingC);
 }
 
 /** countAnimalsPending
@@ -36,9 +36,9 @@ function countAnimals() {
  */
 function countAnimalsPending() {
     global $table;
-    global $notPendingC;
+    global $pendingC;
      
-    return countFieldsCondition($table, $notPendingC);
+    return countFieldsCondition($table, $pendingC);
 }
 
 /**addAnimal
